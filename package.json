@@ -1,0 +1,70 @@
+{
+	"name": "typezero",
+	"version": "0.1.0",
+	"description": "🚀 TypeZero: Zero-config TypeScript starter for modern Node.js development. ESM, Vitest, ESLint, Prettier — production-ready in seconds! ⚡",
+	"main": "build/index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"lint": "prettier --check . && eslint .",
+		"lint:fix": "prettier --write . && eslint . --fix",
+		"test": "vitest src",
+		"test:coverage": "vitest run --coverage",
+		"clean": "rimraf build",
+		"build": "pnpm clean && tsc && tsc-alias",
+		"start": "node build/index.js"
+	},
+	"keywords": [
+		"nodejs",
+		"node.js",
+		"typescript",
+		"esmodules",
+		"vitest",
+		"backend",
+		"starter-kit",
+		"template",
+		"boilerplate",
+		"starter"
+	],
+	"author": {
+		"name": "Mohammad Islam",
+		"email": "hi@mislam.dev",
+		"url": "https://www.mislam.dev"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"dotenv": "^16.4.5"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.4",
+		"@eslint/js": "^9.1.0",
+		"@tsconfig/node20": "^20.1.4",
+		"@types/node": "^22.10.5",
+		"@vitest/coverage-v8": "^2.1.8",
+		"eslint": "^9.17.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.3",
+		"globals": "^15.14.0",
+		"prettier": "^3.4.2",
+		"rimraf": "^6.0.1",
+		"tsc-alias": "^1.8.10",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.19.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^2.1.8"
+	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"volta": {
+		"node": "22.13.1",
+		"pnpm": "10.0.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"packageManager": "pnpm@10.0.0"
+}
