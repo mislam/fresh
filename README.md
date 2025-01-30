@@ -1,4 +1,4 @@
-# 🚀 TypeZero: Next-Gen Node.js + TypeScript Starter Kit (2025) ⚡
+# TypeZero – A Next-Gen Node.js + TypeScript Starter Kit for 2025
 
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D22-brightgreen)
 ![TypeScript Version](https://img.shields.io/badge/typescript-5.7-blue)
@@ -10,17 +10,17 @@
 development** - Start building production-ready Node.js applications in seconds
 ⏱️
 
-## 🎯 Why TypeZero?
+## Why TypeZero?
 
 Tired of wasting hours configuring TypeScript projects? TypeZero eliminates the
 setup headache with:
 
-- 🚀 **Blazing-fast development workflow** with hot reload
+- ⚡ **Blazing-fast development workflow** with hot reload
 - 🔒 **Enterprise-grade code quality** (ESLint + Prettier + TypeScript strict
   mode)
 - 📦 **Future-proof ESM architecture** (Native ES Modules)
 - 🧪 **Testing powerhouse** (Vitest + 90% coverage enforcement)
-- ⚡ **Batteries-included** for 2025 backend development
+- 🚀 **Batteries-included** for 2025 backend development
 
 ## 🌟 Featured In
 
@@ -36,7 +36,7 @@ setup headache with:
 | ✅ Smart import aliases       | ✅ Env validation system     |
 | ✅ VS Code perfection         | ✅ Performance benchmarks    |
 
-## 📦 Core Features
+## Core Features
 
 - **Modern JavaScript Foundation**
 

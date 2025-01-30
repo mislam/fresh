@@ -1,7 +1,7 @@
 {
 	"name": "typezero",
 	"version": "0.1.0",
-	"description": "🚀 TypeZero: Zero-config TypeScript starter for modern Node.js development. ESM, Vitest, ESLint, Prettier — production-ready in seconds! ⚡",
+	"description": "Zero-config TypeScript starter for modern Node.js development. ESM, Vitest, ESLint, Prettier. Production-ready in seconds! ⚡",
 	"main": "build/index.js",
 	"type": "module",
 	"scripts": {
