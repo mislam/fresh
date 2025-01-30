@@ -134,3 +134,8 @@ and
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+We welcome contributions! See our [contributing guidelines](CONTRIBUTING.md) for
+more details.
