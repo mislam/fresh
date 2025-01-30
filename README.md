@@ -139,3 +139,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 We welcome contributions! See our [contributing guidelines](CONTRIBUTING.md) for
 more details.
+
+> **Note**: This project is based on
+> [TypeZero](https://github.com/mislam/typezero). Please consider giving a ⭐ to
+> the original repository!
