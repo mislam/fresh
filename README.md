@@ -70,8 +70,7 @@ Jumpstart your next TypeScript project with:
 
 ## Requirements
 
-- Node.js 22+
-- PNPM 10
+- Node.js 22+ (LTS recommended)
 
 ## Quick Start
 
@@ -89,8 +88,8 @@ cp .env.example .env
 Install dependencies & start development server:
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 ## Project Structure
@@ -114,15 +113,15 @@ my-app/
 
 ## Core Commands
 
-| Command              | Action                           |
-| -------------------- | -------------------------------- |
-| `pnpm dev`           | Start dev server with hot reload |
-| `pnpm lint`          | Check code quality               |
-| `pnpm lint:fix`      | Fix linting/formatting issues    |
-| `pnpm test`          | Run all tests                    |
-| `pnpm test:coverage` | Generate coverage report         |
-| `pnpm build`         | Compile to `build/` directory    |
-| `pnpm start`         | Start production server          |
+| Command                 | Action                           |
+| ----------------------- | -------------------------------- |
+| `npm run dev`           | Start dev server with hot reload |
+| `npm run lint`          | Check code quality               |
+| `npm run lint:fix`      | Fix linting/formatting issues    |
+| `npm test`              | Run all tests                    |
+| `npm run test:coverage` | Generate coverage report         |
+| `npm run build`         | Compile to `build/` directory    |
+| `npm start`             | Start production server          |
 
 ## Editor Setup
 
@@ -137,9 +136,18 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Contributing
 
-We welcome contributions! See our [contributing guidelines](CONTRIBUTING.md) for
-more details.
+We deeply appreciate ❤️ contributions from our community! Whether you're fixing
+a typo or building new features, your help makes this project better for
+everyone. Please see our [contribution guide](CONTRIBUTING.md) for details on
+how to get started.
+
+When developing the template itself, the template's development uses `pnpm` for
+package management for consistent dependencies. The `pnpm-lock.yaml` file is
+only present in this repository for template development. It will **not** be
+included when users create new projects using `npm create typezero` (coming
+soon).
 
 > **Note**: This project is based on
-> [TypeZero](https://github.com/mislam/typezero). Please consider giving a ⭐ to
-> the original repository!
+> [TypeZero](https://github.com/mislam/typezero). If this template helps you
+> kickstart your project, we'd be grateful if you could ⭐ the original
+> repository to support its development!
