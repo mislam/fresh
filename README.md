@@ -125,10 +125,19 @@ my-app/
 
 ## Editor Setup
 
-Install
-[VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+When opening the project in VS Code, you'll be prompted to install recommended
+extensions. These include:
+
+[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint),
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode),
 and
-[Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+[EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+
+This project includes configuration files that will automatically:
+
+- Apply consistent code formatting
+- Enforce code quality rules
+- Configure editor settings (line endings, indentation)
 
 ## License
 
