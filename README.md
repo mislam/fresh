@@ -15,7 +15,7 @@ development** - Start building production-ready Node.js applications in seconds
 Tired of wasting hours configuring TypeScript projects? TypeZero eliminates the
 setup headache with:
 
-- ⚡ **Blazing-fast development workflow** with hot reload
+- ⚡ **Blazing-fast development workflow** with live reload
 - 🔒 **Enterprise-grade code quality** (ESLint + Prettier + TypeScript strict
   mode)
 - 📦 **Future-proof ESM architecture** (Native ES Modules)
@@ -67,6 +67,7 @@ Jumpstart your next TypeScript project with:
 - 🧪 **Vitest** - Fast testing with 90%+ coverage
 - 📦 **Native ESM** - Modern import/export syntax
 - 🚀 **Production-ready configuration** - Build & start scripts
+- 🔄 **Live reload** - Server restarts on file changes
 
 ## Requirements
 
@@ -113,15 +114,15 @@ my-app/
 
 ## Core Commands
 
-| Command                 | Action                           |
-| ----------------------- | -------------------------------- |
-| `npm run dev`           | Start dev server with hot reload |
-| `npm run lint`          | Check code quality               |
-| `npm run lint:fix`      | Fix linting/formatting issues    |
-| `npm test`              | Run all tests                    |
-| `npm run test:coverage` | Generate coverage report         |
-| `npm run build`         | Compile to `build/` directory    |
-| `npm start`             | Start production server          |
+| Command                 | Action                            |
+| ----------------------- | --------------------------------- |
+| `npm run dev`           | Start dev server with live reload |
+| `npm run lint`          | Check code quality                |
+| `npm run lint:fix`      | Fix linting/formatting issues     |
+| `npm test`              | Run all tests                     |
+| `npm run test:coverage` | Generate coverage report          |
+| `npm run build`         | Compile to `build/` directory     |
+| `npm start`             | Start production server           |
 
 ## Editor Setup
 
