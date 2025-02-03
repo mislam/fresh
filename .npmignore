@@ -1,0 +1,4 @@
+.env
+.github/
+!.gitignore
+/CONTRIBUTING.md
