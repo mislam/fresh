@@ -16,10 +16,28 @@ Create production-ready Node.js applications in seconds with TypeScript, ESM, Li
 
 ## Quick Start
 
-Just run:
+With NPM:
 
 ```bash
 npm create typezero@latest
+```
+
+With Yarn:
+
+```bash
+yarn create typezero
+```
+
+With PNPM:
+
+```bash
+pnpm create typezero
+```
+
+With Bun:
+
+```bash
+bun create typezero
 ```
 
 And... Baaaam! 💥
