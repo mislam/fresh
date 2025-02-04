@@ -2,6 +2,6 @@ import { describe, it, expect } from 'vitest'
 
 describe('Application', () => {
 	it('should run tests', () => {
-		expect(true).toBe(true)
+		expect(true).toBe(true) // psst... just chill, this is just a dummy test!
 	})
 })
