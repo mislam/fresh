@@ -1,40 +1,87 @@
-# TypeZero – A Next-Gen Node.js + TypeScript Starter Kit for 2025
+# TypeZero ⚡️
 
-![Node.js Version](https://img.shields.io/badge/node-%3E%3D22-brightgreen)
-![TypeScript Version](https://img.shields.io/badge/typescript-5.7-blue)
-![Test Coverage](https://img.shields.io/badge/coverage-90%25-success)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Bundle Size](https://img.shields.io/badge/bundle-optimized-brightgreen)
+**Kickstart your Node.js project like never before!**
 
-**The zero-configuration TypeScript boilerplate for modern backend
-development** - Start building production-ready Node.js applications in seconds
-⏱️
+![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D22-blue)
+![TypeScript Version](https://img.shields.io/badge/Typescript-5.7-blue)
+![MIT License](https://img.shields.io/badge/License-MIT-orange)
+![Production Ready](https://img.shields.io/badge/Production-Ready-brightgreen)
 
-## Why TypeZero?
+Create production-ready Node.js applications in seconds with TypeScript, ESM, Linting, Testing, and more!
 
-Tired of wasting hours configuring TypeScript projects? TypeZero eliminates the
-setup headache with:
+> Note: This project inherited its standards and best practices from awesome
+> three stooges: **Vite**, **Next.js** and **SvelteKit**! And code-reviewed by
+> three masterminds: **OpenAI**'s GPT models, **DeepSeek R1**, and Anthropic's
+> **Claude** Sonnet 3.5! With my human supervision of course! 😉
 
-- ⚡ **Blazing-fast development workflow** with live reload
-- 🔒 **Enterprise-grade code quality** (ESLint + Prettier + TypeScript strict
-  mode)
-- 📦 **Future-proof ESM architecture** (Native ES Modules)
-- 🧪 **Testing powerhouse** (Vitest + 90% coverage enforcement)
-- 🚀 **Batteries-included** for 2025 backend development
+## Quick Start
 
-## 🌟 Featured In
+With NPM:
 
-[![Featured on NodeWeekly](https://img.shields.io/badge/Featured-NodeWeekly-important)](https://nodeweekly.com)
-[![Trending on GitHub](https://img.shields.io/badge/Trending-GitHub-black)](https://github.com/trending)
+```bash
+npm create typezero@latest
+```
 
-## 🛠️ Developer Experience Highlights
+With Yarn:
 
-| 🚄 Rapid Development          | 🛡️ Production Essentials     |
-| ----------------------------- | ---------------------------- |
-| ✅ Zero-config TypeScript 5.7 | ✅ Optimized build pipeline  |
-| ✅ Instant dev server         | ✅ Docker-ready architecture |
-| ✅ Smart import aliases       | ✅ Env validation system     |
-| ✅ VS Code perfection         | ✅ Performance benchmarks    |
+```bash
+yarn create typezero
+```
+
+With PNPM:
+
+```bash
+pnpm create typezero
+```
+
+With Bun:
+
+```bash
+bun create typezero
+```
+
+And... Baaaam! 💥
+
+## WTH is TypeZero?
+
+TypeZero is a Zero-Config TypeScript starter for modern Node.js development. All bells and whistles are included and pre-configured for 2025!
+
+## Why TypeZero Wins? 💖
+
+You gotta be kidding me! Are you still not tired of wasting hours configuring your TypeScript projects? It's **2025** bro!
+
+TypeZero eliminates the setup headache with:
+
+🔋 **Zero-config TypeScript** - Strict safety from first install  
+✨ **Clean Code** - ESLint + Prettier pre-configured  
+🧪 **Testing Powerhouse** - Vitest with 90% coverage enforcement  
+🚀 **Production-Ready** - Batteries included for backend development  
+⚡ **Rapid Iteration** - Instant restarts via TSX watch mode
+
+### Developer Experience
+
+| Category         | Our Magic        | Others          | Result         |
+| ---------------- | ---------------- | --------------- | -------------- |
+| **First Run**    | "It works!" 🎉   | "Docs needed"   | Instant joy    |
+| **TypeScript**   | Built-in 🔋      | DIY setup       | Code safety    |
+| **Testing**      | Ready-to-test 🧪 | Choose your own | Ship faster 🚀 |
+| **Setup**        | Guided prompt 💬 | Silent CLI      | No confusion   |
+| **Security**     | Safe defaults 🔒 | "Figure it out" | Peace of mind  |
+| **Dependencies** | Always fresh     | Legacy packages | No tech debt   |
+| **Experience**   | Zen mode 🧘      | Config hell     | Happy devs     |
+
+### Technical Comparison
+
+| Feature          | TypeZero | Next.js | Nest | Express | Fastify |
+| ---------------- | -------- | ------- | ---- | ------- | ------- |
+| Backend-focused  | ✅       | ⚠️      | ✅   | ✅      | ✅      |
+| TypeScript-first | ✅       | ✅      | ✅   | ❌      | ⚠️      |
+| Test suite       | ✅       | ❌      | ✅   | ❌      | ❌      |
+| Modern ESM       | ✅       | ⚠️      | ❌   | ❌      | ⚠️      |
+| Zero-config      | ✅       | ❌      | ❌   | ✅      | ❌      |
+| Interactive      | ✅       | ❌      | ❌   | ❌      | ❌      |
+| Production-ready | ✅       | ✅      | ⚠️   | ❌      | ❌      |
+| Fresh deps       | ✅       | ⚠️      | ⚠️   | ❌      | ⚠️      |
 
 ## Core Features
 
@@ -62,54 +109,48 @@ setup headache with:
 
 Jumpstart your next TypeScript project with:
 
-- ⚡ **TypeScript 5.7** - Strict type safety
+- ⚡ **TypeScript 5.7** - Strict type safety out of the box
 - 🛠️ **Code Quality Tools** - ESLint & Prettier
 - 🧪 **Vitest** - Fast testing with 90%+ coverage
 - 📦 **Native ESM** - Modern import/export syntax
 - 🚀 **Production-ready configuration** - Build & start scripts
-- 🔄 **Live reload** - Server restarts on file changes
+- 🔄 **Live Reload** - Instant server restarts on code changes (TSX watch mode)
+
+### Development Workflow
+
+Our `npm run dev` uses [TSX](https://github.com/privatenumber/tsx) for:
+
+- Instant TypeScript execution
+- File watching with process restarts
+- Clean output formatting
+
+> **Why TSX instead of vite-node?**  
+> We chose TSX for its simplicity in server-side scenarios.
+> While vite-node offers HMR, TSX provides faster cold starts and more
+> predictable behavior for API development.
 
 ## Requirements
 
 - Node.js 22+ (LTS recommended)
-
-## Quick Start
-
-```bash
-npx degit mislam/typezero my-app
-cd my-app
-```
-
-Make a copy of `.env.example` and name it `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Install dependencies & start development server:
-
-```bash
-npm install
-npm run dev
-```
 
 ## Project Structure
 
 ```tree
 my-app/
 │
-├── src/              # Source code
-│   ├── index.ts      # Entry point
-│   └── utils/        # Utility modules
+├── src/               # Source code
+│   ├── index.ts       # Entry point
+│   ├── index.test.ts  # Entry point test
+│   └── utils/         # Utility modules
 │
-├── build/            # Compiled output
+├── build/             # Compiled output
 │
-├── .env              # Environment variables
-├── .vscode/          # Editor settings
-├── .prettierrc       # Code formatting rules
-├── eslint.config.js  # ESLint configuration
-├── tsconfig.json     # TypeScript configuration
-└── vite.config.ts    # Vitest configuration
+├── .env               # Environment variables
+├── .vscode/           # Editor settings
+├── .prettierrc        # Code formatting rules
+├── eslint.config.js   # ESLint configuration
+├── tsconfig.json      # TypeScript configuration
+└── vite.config.ts     # Vitest configuration
 ```
 
 ## Core Commands
