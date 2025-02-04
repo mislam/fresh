@@ -1,19 +1,35 @@
-# TypeZero – A Next-Gen Node.js + TypeScript Starter Kit for 2025
+# TypeZero ⚡️
 
-![Node.js Version](https://img.shields.io/badge/node-%3E%3D22-brightgreen)
-![TypeScript Version](https://img.shields.io/badge/typescript-5.7-blue)
-![Test Coverage](https://img.shields.io/badge/coverage-90%25-success)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Bundle Size](https://img.shields.io/badge/bundle-optimized-brightgreen)
+**Kickstart your Node.js project like never before!**
 
-**The zero-configuration TypeScript boilerplate for modern backend
-development** - Start building production-ready Node.js applications in seconds
-⏱️
+![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D22-blue)
+![TypeScript Version](https://img.shields.io/badge/Typescript-5.7-blue)
+![MIT License](https://img.shields.io/badge/License-MIT-orange)
+![Production Ready](https://img.shields.io/badge/Production-Ready-brightgreen)
+
+Create production-ready Node.js applications in seconds with TypeScript, ESM, Linting, Testing, and so much more!
+
+## Quick Start
+
+Just run:
+
+```bash
+npm create typezero@latest
+```
+
+And... Baaaam! 💥
+
+> Note: This project inherited its standards and best practices from awesome big brothers: **Vite**, **Next.js** and **SvelteKit**! And code-reviewed by **OpenAI**'s GPT models, **DeepSeek R1**, and Anthropic's **Claude** Sonnet 3.5!
+
+## WTH is TypeZero?
+
+TypeZero is a Zero-Config TypeScript starter for modern Node.js development. All bells and whistles are included and pre-configured for 2025!
 
 ## Why TypeZero?
 
-Tired of wasting hours configuring TypeScript projects? TypeZero eliminates the
-setup headache with:
+You gotta be kidding me! Are you still not tired of wasting hours configuring your TypeScript projects? It's **2025** bro!
+
+TypeZero eliminates the setup headache with:
 
 - ⚡ **Blazing-fast development workflow** with live reload
 - 🔒 **Enterprise-grade code quality** (ESLint + Prettier + TypeScript strict
@@ -21,11 +37,6 @@ setup headache with:
 - 📦 **Future-proof ESM architecture** (Native ES Modules)
 - 🧪 **Testing powerhouse** (Vitest + 90% coverage enforcement)
 - 🚀 **Batteries-included** for 2025 backend development
-
-## 🌟 Featured In
-
-[![Featured on NodeWeekly](https://img.shields.io/badge/Featured-NodeWeekly-important)](https://nodeweekly.com)
-[![Trending on GitHub](https://img.shields.io/badge/Trending-GitHub-black)](https://github.com/trending)
 
 ## 🛠️ Developer Experience Highlights
 
@@ -73,43 +84,24 @@ Jumpstart your next TypeScript project with:
 
 - Node.js 22+ (LTS recommended)
 
-## Quick Start
-
-```bash
-npx degit mislam/typezero my-app
-cd my-app
-```
-
-Make a copy of `.env.example` and name it `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Install dependencies & start development server:
-
-```bash
-npm install
-npm run dev
-```
-
 ## Project Structure
 
 ```tree
 my-app/
 │
-├── src/              # Source code
-│   ├── index.ts      # Entry point
-│   └── utils/        # Utility modules
+├── src/               # Source code
+│   ├── index.ts       # Entry point
+│   ├── index.test.ts  # Entry point test
+│   └── utils/         # Utility modules
 │
-├── build/            # Compiled output
+├── build/             # Compiled output
 │
-├── .env              # Environment variables
-├── .vscode/          # Editor settings
-├── .prettierrc       # Code formatting rules
-├── eslint.config.js  # ESLint configuration
-├── tsconfig.json     # TypeScript configuration
-└── vite.config.ts    # Vitest configuration
+├── .env               # Environment variables
+├── .vscode/           # Editor settings
+├── .prettierrc        # Code formatting rules
+├── eslint.config.js   # ESLint configuration
+├── tsconfig.json      # TypeScript configuration
+└── vite.config.ts     # Vitest configuration
 ```
 
 ## Core Commands
