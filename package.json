@@ -1,6 +1,6 @@
 {
 	"name": "typezero",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"description": "Zero-config TypeScript starter for modern Node.js development. ESM, Vitest, ESLint, Prettier. Production-ready in seconds! ⚡",
 	"main": "build/index.js",
 	"type": "module",
@@ -14,11 +14,20 @@
 		"build": "rimraf build && tsc && tsc-alias",
 		"start": "node build/index.js"
 	},
+	"author": {
+		"name": "Mohammad Islam",
+		"url": "https://www.mislam.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mislam/typezero.git"
+	},
+	"homepage": "https://typezero.dev",
 	"keywords": [
 		"nodejs",
 		"node.js",
 		"typescript",
-		"esmodules",
+		"express",
 		"vitest",
 		"backend",
 		"starter-kit",
@@ -26,10 +35,6 @@
 		"boilerplate",
 		"starter"
 	],
-	"author": {
-		"name": "Mohammad Islam",
-		"url": "https://www.mislam.dev"
-	},
 	"license": "MIT",
 	"dependencies": {
 		"dotenv": "^16.4.5"
