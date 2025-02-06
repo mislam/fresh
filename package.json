@@ -1,6 +1,6 @@
 {
 	"name": "typezero",
-	"version": "0.2.4",
+	"version": "0.3.0",
 	"description": "Zero-config TypeScript starter for modern Node.js development. ESM, Vitest, ESLint, Prettier. Production-ready in seconds! ⚡",
 	"main": "build/index.js",
 	"type": "module",
@@ -8,8 +8,8 @@
 		"dev": "tsx watch src/index.ts",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "prettier --write . && eslint . --fix",
-		"test": "vitest src",
-		"test:coverage": "vitest run --coverage",
+		"test": "vitest src --silent",
+		"test:coverage": "vitest run --coverage --silent",
 		"clean": "rimraf build",
 		"build": "rimraf build && tsc && tsc-alias",
 		"start": "node build/index.js"
