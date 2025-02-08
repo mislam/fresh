@@ -1,11 +1,11 @@
-import prettier from 'eslint-config-prettier'
-import js from '@eslint/js'
-import { includeIgnoreFile } from '@eslint/compat'
 import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
+import { includeIgnoreFile } from '@eslint/compat'
+import js from '@eslint/js'
 import ts from 'typescript-eslint'
 import globals from 'globals'
+import prettier from 'eslint-config-prettier'
 import prettierPlugin from 'eslint-plugin-prettier'
-import { readFileSync } from 'node:fs'
 
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url))
 const prettierConfig = JSON.parse(readFileSync(new URL('./.prettierrc', import.meta.url)))

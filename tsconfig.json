@@ -19,7 +19,11 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
-		}
+		},
+		"incremental": true,
+		"removeComments": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true
 	},
 	"tsc-alias": {
 		"resolveFullPaths": true
