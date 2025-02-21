@@ -15,7 +15,7 @@ Tired of wasting hours configuring TypeScript projects? TypeZero eliminates the
 setup headache with:
 
 ⚡ **Blazing-fast development workflow** with live reload  
-🔒 **Enterprise-grade code quality** (ESLint + Prettier + TypeScript)  
+🔒 **Enterprise-grade code quality** (Biome + TypeScript)  
 📦 **Future-proof ESM architecture** (Native ES Modules)  
 🧪 **Testing powerhouse** (Vitest + 90% coverage enforcement)  
 🚀 **Batteries-included** for 2025 backend development
@@ -47,17 +47,19 @@ Use these essential commands to accelerate your development experience:
 | Command                 | Action                              |
 | ----------------------- | ----------------------------------- |
 | `npm run dev`           | Start dev server with file watching |
-| `npm run lint`          | Check code style and quality        |
-| `npm run lint:fix`      | Fix code style and quality issues   |
+| `npm run check`         | Verify code formatting & lint rules |
+| `npm run fix`           | Auto-fix formatting & lint issues   |
+| `npm run format`        | Format code without lint fixes      |
 | `npm test`              | Execute test suite                  |
 | `npm run test:coverage` | Generate coverage reports           |
+| `npm run clean`         | Clean build directory               |
 | `npm run build`         | Create production build             |
 | `npm start`             | Start optimized production server   |
 
 ## Features
 
 ⚡ **TypeScript 5.7** - Strict type safety  
-🛠️ **Code Quality Tools** - ESLint & Prettier  
+🛠️ **Biome** - Unified formatting & linting  
 🧪 **Vitest** - Fast testing with ≥90% coverage  
 📦 **Native ESM** - Modern import/export syntax  
 🚀 **Production-ready** - Optimized build and runtime configuration  
@@ -77,28 +79,14 @@ my-app/
 │
 ├── .env               # Environment variables
 ├── .vscode/           # Editor settings
-├── .prettierrc        # Code formatting rules
-├── eslint.config.js   # ESLint configuration
+├── biome.json         # Biome configuration
 ├── tsconfig.json      # TypeScript configuration
 └── vite.config.ts     # Vitest configuration
 ```
 
 ## Editor Integration
 
-VS Code will automatically recommend:
-
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-
-Pre-configured to enforce:
-
-- Consistent code style across teams
-- Auto-fix on save functionality
-- Type-aware linting rules
-- Minimum 90% test coverage
-- ESM imports only (no CommonJS)
-- Strict TypeScript checks
+VS Code will automatically recommend [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) for linting and formatting.
 
 ## License
 

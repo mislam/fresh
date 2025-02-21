@@ -1,9 +1,9 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
 	"editor.rulers": [100],
-	"[markdown]": {
-		"editor.rulers": [80]
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		// "source.organizeImports.biome": "explicit"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
