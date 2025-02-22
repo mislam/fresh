@@ -1,33 +1,27 @@
 {
-	"extends": "@tsconfig/node20/tsconfig.json",
 	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"lib": ["ES2023"],
-		"sourceMap": true,
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"skipLibCheck": true,
-		"strict": true,
+		// Enable latest features
+		"lib": ["ESNext", "DOM"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"jsx": "react-jsx",
 		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"outDir": "build",
-		"rootDir": "src",
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"]
-		},
-		"incremental": true,
-		"removeComments": true,
+
+		// Bundler mode
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+
+		// Best practices
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+
+		// Some stricter flags
 		"noUnusedLocals": true,
-		"noUnusedParameters": true
-	},
-	"tsc-alias": {
-		"resolveFullPaths": true
-	},
-	"include": ["src/**/*.ts", "src/**/*.test.ts"],
-	"exclude": ["node_modules", "build"]
+		"noUnusedParameters": true,
+		"noPropertyAccessFromIndexSignature": true
+	}
 }

@@ -14,10 +14,10 @@ Thanks for your interest in contributing! 🎉
 ## Quick Start
 
 1. Fork and clone the repo
-2. Install dependencies: `pnpm install`
+2. Install dependencies: `bun install`
 3. Create a branch: `git checkout -b feature/amazing-idea`
 4. Make your changes
-5. Run tests: `pnpm test`
+5. Run tests: `bun run test`
 6. [Submit a PR](https://github.com/mislam/typezero/compare)
 
 ## Commit Messages
@@ -39,9 +39,9 @@ Add TypeScript path aliases
 
 ## Development
 
-- Run `pnpm dev` for development server
+- Run `bun run dev` for development server
 - Follow existing code style
-- Check code quality with `pnpm lint`
+- Check code quality with `bun run check`
 - Add tests for new features
 - Update documentation as needed
 

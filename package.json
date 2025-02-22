@@ -1,19 +1,26 @@
 {
 	"name": "typezero",
-	"version": "0.4.1",
-	"description": "Zero-config TypeScript starter for modern Node.js development. ESM, Biome, Vitest. Production-ready in seconds! ⚡",
+	"version": "0.5.0",
+	"description": "Next-gen TypeScript starter with Bun ⚡️ Zero-config, ESM, Linter, Formatter, and production-ready with blazing fast performance.",
 	"main": "build/index.js",
 	"type": "module",
 	"scripts": {
-		"dev": "tsx watch src/index.ts",
+		"dev": "bun --watch src/index.ts",
+		"dev:test": "bun test --watch",
 		"check": "biome check .",
 		"fix": "biome check --fix .",
 		"format": "biome format --write .",
-		"test": "vitest src --silent",
-		"test:coverage": "vitest run --coverage --silent",
-		"clean": "rimraf build",
-		"build": "rimraf build && tsc && tsc-alias",
-		"start": "node build/index.js"
+		"test": "bun test src",
+		"test:coverage": "bun test --coverage",
+		"build": "bunx rimraf build && bun build src/index.ts --outdir ./build",
+		"start": "bun run build/index.js"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "^1.2.2"
+	},
+	"dependencies": {
+		"hono": "^4.7.2"
 	},
 	"author": {
 		"name": "Mohammad Islam",
@@ -26,38 +33,15 @@
 	"homepage": "https://typezero.dev",
 	"keywords": [
 		"nodejs",
-		"node.js",
+		"bun",
 		"typescript",
-		"express",
-		"vitest",
+		"linter",
+		"formatter",
 		"backend",
 		"starter-kit",
 		"template",
 		"boilerplate",
 		"starter"
 	],
-	"license": "MIT",
-	"dependencies": {
-		"dotenv": "^16.4.5"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@tsconfig/node20": "^20.1.4",
-		"@types/node": "^22.10.5",
-		"@vitest/coverage-v8": "^2.1.8",
-		"globals": "^15.14.0",
-		"rimraf": "^6.0.1",
-		"tsc-alias": "^1.8.10",
-		"tsx": "^4.19.2",
-		"typescript": "^5.7.2",
-		"vite-tsconfig-paths": "^5.1.4",
-		"vitest": "^2.1.8"
-	},
-	"engines": {
-		"node": ">=22.0.0"
-	},
-	"volta": {
-		"node": "22.13.1",
-		"pnpm": "10.0.0"
-	}
+	"license": "MIT"
 }
