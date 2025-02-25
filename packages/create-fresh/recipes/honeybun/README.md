@@ -45,9 +45,7 @@ Use these essential commands to accelerate your development experience:
 #### Project Structure
 
 ```tree
-project/
-│
-├── .vscode/           # Editor settings
+my-app/
 │
 ├── src/               # Source code
 │   ├── index.ts       # Entry point
@@ -57,6 +55,7 @@ project/
 │
 ├── build/             # Compiled output
 │
+├── .vscode/           # Editor settings
 ├── biome.json         # Biome configuration
 └── tsconfig.json      # TypeScript configuration
 ```
@@ -78,10 +77,10 @@ We welcome contributions through:
 📚 Documentation Improvements  
 🛠️ Code Contributions
 
-Please review our [Contribution Guide](CONTRIBUTING.md) before submitting changes.
+Please review our [Contribution Guide](https://github.com/mislam/fresh/blob/main/CONTRIBUTING.md) before submitting changes.
 
 > **Powered by Fresh**  
-> If this starter kit helps accelerate your development, consider showing your support with a ⭐ on [GitHub](https://github.com/mislam/fresh)!
+> If this turbo stack helps accelerate your development, consider showing your support with a ⭐ on [Fresh]!
 
 [Fresh]: https://github.com/mislam/fresh
 [Bun]: https://bun.sh

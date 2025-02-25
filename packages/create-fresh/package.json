@@ -8,5 +8,40 @@
 		"type": "git",
 		"url": "git+https://github.com/mislam/fresh.git"
 	},
-	"type": "module"
+	"keywords": [
+		"typescript",
+		"hono",
+		"bun",
+		"nodejs",
+		"api",
+		"server",
+		"backend",
+		"framework",
+		"boilerplate",
+		"template"
+	],
+	"type": "module",
+	"bin": {
+		"create-fresh": "./build/index.js"
+	},
+	"scripts": {
+		"dev": "bun src/index.ts",
+		"check": "biome check .",
+		"fix": "biome check --fix .",
+		"format": "biome format --write .",
+		"test": "bun test src",
+		"test:coverage": "bun test --coverage",
+		"build": "bunx rimraf build && bun build src/index.ts --outdir ./build --target node",
+		"start": "bun run build/index.js"
+	},
+	"dependencies": {
+		"@clack/prompts": "^0.10.0",
+		"minimist": "^1.2.8",
+		"picocolors": "^1.1.1"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.2",
+		"@types/minimist": "^1.2.5",
+		"@types/node": "^22.13.5"
+	}
 }

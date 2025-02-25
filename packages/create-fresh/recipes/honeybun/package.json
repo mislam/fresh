@@ -1,6 +1,8 @@
 {
 	"name": "honeybun",
-	"version": "0.5.0",
+	"version": "0.1.0",
+	"description": "a modern web framework powered by Hono and Bun",
+	"license": "MIT",
 	"private": true,
 	"type": "module",
 	"main": "build/index.js",
@@ -21,5 +23,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/bun": "^1.2.2"
+	},
+	"recipe": {
+		"pkgManager": "bun"
 	}
 }
