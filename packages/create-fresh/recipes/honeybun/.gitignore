@@ -4,6 +4,11 @@ node_modules/
 # production
 build/
 
+# environment
+.env
+.env.*
+!.env.example
+
 # editor
 .vscode/*
 !.vscode/extensions.json

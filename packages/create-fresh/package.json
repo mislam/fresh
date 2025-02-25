@@ -1,0 +1,12 @@
+{
+	"name": "create-fresh",
+	"version": "0.1.0",
+	"description": "Create a fresh project with a single command",
+	"author": "Mohammad Islam",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mislam/fresh.git"
+	},
+	"type": "module"
+}

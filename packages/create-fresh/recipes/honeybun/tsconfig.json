@@ -21,7 +21,6 @@
 
 		// Some stricter flags
 		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noPropertyAccessFromIndexSignature": true
+		"noUnusedParameters": true
 	}
 }

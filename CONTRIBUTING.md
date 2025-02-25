@@ -1,12 +1,12 @@
-# Contributing to TypeZero
+# Contributing to Fresh
 
 Thanks for your interest in contributing! 🎉
 
 ## Before You Start
 
-1. Search [existing issues](https://github.com/mislam/typezero/issues) and
-   [pull requests](https://github.com/mislam/typezero/pulls)
-2. [Open a new issue](https://github.com/mislam/typezero/issues/new/choose) to
+1. Search [existing issues](https://github.com/mislam/fresh/issues) and
+   [pull requests](https://github.com/mislam/fresh/pulls)
+2. [Open a new issue](https://github.com/mislam/fresh/issues/new/choose) to
    discuss your proposal
 3. Share your thoughts and gather feedback
 4. Start coding and link the issue in your PR
@@ -17,8 +17,9 @@ Thanks for your interest in contributing! 🎉
 2. Install dependencies: `bun install`
 3. Create a branch: `git checkout -b feature/amazing-idea`
 4. Make your changes
-5. Run tests: `bun run test`
-6. [Submit a PR](https://github.com/mislam/typezero/compare)
+5. Check code quality: `bun run check`
+6. Run tests: `bun run test`
+7. [Submit a PR](https://github.com/mislam/fresh/compare)
 
 ## Commit Messages
 
@@ -30,7 +31,7 @@ Thanks for your interest in contributing! 🎉
 Example:
 
 ```
-Add TypeScript path aliases
+feat: add TypeScript path aliases
 
 - Configure tsconfig.json for @/ imports
 - Update build process for alias support
@@ -55,8 +56,8 @@ Add TypeScript path aliases
 
 ## Questions?
 
-[Open an issue](https://github.com/mislam/typezero/issues/new/choose) or join
-our [discussions](https://github.com/mislam/typezero/discussions) for any
+[Open an issue](https://github.com/mislam/fresh/issues/new/choose) or join
+our [discussions](https://github.com/mislam/fresh/discussions) for any
 questions.
 
-Thanks for making TypeZero better! 🚀
+Thanks for making Fresh better! 🚀

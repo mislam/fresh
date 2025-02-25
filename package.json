@@ -1,47 +1,8 @@
 {
-	"name": "typezero",
-	"version": "0.5.0",
-	"description": "Next-gen TypeScript starter with Bun ⚡️ Zero-config, ESM, Linter, Formatter, and production-ready with blazing fast performance.",
-	"main": "build/index.js",
-	"type": "module",
-	"scripts": {
-		"dev": "bun --watch src/index.ts",
-		"dev:test": "bun test --watch",
-		"check": "biome check .",
-		"fix": "biome check --fix .",
-		"format": "biome format --write .",
-		"test": "bun test src",
-		"test:coverage": "bun test --coverage",
-		"build": "bunx rimraf build && bun build src/index.ts --outdir ./build",
-		"start": "bun run build/index.js"
-	},
+	"name": "fresh-monorepo",
+	"private": true,
+	"workspaces": ["packages/*"],
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@types/bun": "^1.2.2"
-	},
-	"dependencies": {
-		"hono": "^4.7.2"
-	},
-	"author": {
-		"name": "Mohammad Islam",
-		"url": "https://www.mislam.dev"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/mislam/typezero.git"
-	},
-	"homepage": "https://typezero.dev",
-	"keywords": [
-		"nodejs",
-		"bun",
-		"typescript",
-		"linter",
-		"formatter",
-		"backend",
-		"starter-kit",
-		"template",
-		"boilerplate",
-		"starter"
-	],
-	"license": "MIT"
+		"@biomejs/biome": "1.9.4"
+	}
 }
