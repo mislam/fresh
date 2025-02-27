@@ -27,6 +27,10 @@ process.on("SIGINT", () => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Get the package version
+const packageJsonPath = path.resolve(__dirname, "../package.json");
+const packageVersion = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8")).version;
+
 interface PkgInfo {
 	name: string;
 	version: string;
@@ -75,9 +79,10 @@ const pkgManager = pkgInfo ? pkgInfo.name : "npm";
 const argv = minimist<{
 	recipe?: string;
 	help?: boolean;
+	version?: boolean;
 }>(process.argv.slice(2), {
-	default: { help: false },
-	alias: { h: "help", r: "recipe" },
+	default: { help: false, version: false },
+	alias: { h: "help", r: "recipe", v: "version" },
 	string: ["_"], // force all positional arguments to be parsed as strings
 });
 
@@ -271,7 +276,14 @@ function copy(src: string, dest: string) {
 			}
 			fs.symlinkSync(linkTarget, dest);
 		} else {
-			fs.copyFileSync(src, dest);
+			// Handle gitignore renaming - if source file is named "gitignore", rename it to ".gitignore"
+			if (path.basename(src) === "gitignore") {
+				const destDir = path.dirname(dest);
+				const destFile = path.join(destDir, ".gitignore");
+				fs.copyFileSync(src, destFile);
+			} else {
+				fs.copyFileSync(src, dest);
+			}
 		}
 	} catch (error) {
 		console.error(`${red("✖")} Failed to copy ${src} to ${dest}: ${error}`);
@@ -315,7 +327,7 @@ function isPathSafe(basePath: string, targetPath: string): boolean {
 
 // CLI Help Message
 const helpMessage = `
-${bold(blue("create-fresh"))} - Fresh project scaffolding tool
+${bold(blue(`Fresh v${packageVersion}`))} - Fresh project scaffolding tool
 
 ${bold("Usage:")} ${pkgManager} create fresh [recipe] [directory]
 
@@ -325,6 +337,7 @@ ${bold("Description:")}
 
 ${bold("Options:")}
   -h, --help                Show this help message
+  -v, --version             Show version number
   -r, --recipe <name>       Specify a recipe to use
 
 ${bold("Available recipes:")} 
@@ -373,6 +386,12 @@ async function main() {
 		return;
 	}
 
+	// Display version if requested
+	if (argv.version) {
+		console.log(packageVersion);
+		return;
+	}
+
 	// Determine if first argument is a recipe or target directory
 	if (argv._[0] && recipes.includes(argv._[0])) {
 		argRecipe = argv._[0];
@@ -402,7 +421,7 @@ async function main() {
 			const isAvailable = await isPackageManagerAvailable(metadata.pkgManager || "");
 
 			// Start the UI for a clean appearance
-			clack.intro(bold(blue("Fresh - Scaffold Your Next Project ✨")));
+			clack.intro(bold(blue(`Fresh v${packageVersion} - Scaffold Your Next Project ✨`)));
 
 			if (!isAvailable) {
 				clack.outro(
@@ -421,7 +440,7 @@ async function main() {
 	}
 
 	// Begin CLI interaction
-	clack.intro(bold(blue("Fresh - Scaffold Your Next Project ✨")));
+	clack.intro(bold(blue(`Fresh v${packageVersion} - Scaffold Your Next Project ✨`)));
 
 	// Ask for recipe if not provided as an argument
 	if (!recipe) {
@@ -531,10 +550,10 @@ async function main() {
 	}
 
 	const root = path.join(cwd, targetDir);
+	let createdDirectory = false;
 
 	try {
 		const spinner = clack.spinner();
-		let createdDirectory = false;
 
 		// Prepare the directory
 		if (overwrite === "yes") {
@@ -670,7 +689,8 @@ async function main() {
 		const cleanupSpinner = clack.spinner();
 
 		// Add cleanup of partially created project
-		if (fs.existsSync(root) && !isEmpty(root)) {
+		// Only clean up if we created the directory or if the user chose to overwrite
+		if ((createdDirectory || overwrite === "yes") && fs.existsSync(root) && !isEmpty(root)) {
 			cleanupSpinner.start("Cleaning up failed installation");
 			emptyDir(root);
 			cleanupSpinner.stop("Cleaned up failed installation");
@@ -683,8 +703,7 @@ async function main() {
 			}
 		}
 
-		clack.outro(`${red("✖")} Failed to scaffold project: ${error}
-Try again with a different directory or recipe.`);
+		clack.outro(`${red("✖")} Failed to scaffold project: ${error}`);
 	}
 }
 

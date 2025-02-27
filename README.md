@@ -15,13 +15,13 @@ Create a new project using your favorite package manager:
 npm create fresh@latest
 
 # Yarn
-yarn create fresh
+yarn create fresh@latest
 
 # PNPM
-pnpm create fresh
+pnpm create fresh@latest
 
 # Bun
-bun create fresh
+bun create fresh@latest
 ```
 
 Follow the interactive prompts to select a recipe and configure your project.
@@ -56,7 +56,7 @@ npm create fresh@latest tiramisu
 A modern web framework powered by Hono and Bun. Ideal for high-performance web APIs and applications.
 
 ```bash
-bun create fresh honeybun
+bun create fresh@latest honeybun
 ```
 
 [![Bun][bun-badge]][Bun]

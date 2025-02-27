@@ -1,6 +1,6 @@
 {
 	"name": "create-fresh",
-	"version": "0.1.0",
+	"version": "0.1.4",
 	"description": "Create a fresh project with a single command",
 	"author": "Mohammad Islam",
 	"license": "MIT",
@@ -32,7 +32,9 @@
 		"test": "bun test src",
 		"test:coverage": "bun test --coverage",
 		"build": "bunx rimraf build && bun build src/index.ts --outdir ./build --target node",
-		"start": "bun run build/index.js"
+		"start": "bun run build/index.js",
+		"prepublishOnly": "bun run build && bun scripts/prepublish.ts",
+		"postpublish": "bun scripts/postpublish.ts"
 	},
 	"dependencies": {
 		"@clack/prompts": "^0.10.0",
